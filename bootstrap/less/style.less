@@ -1,0 +1,727 @@
+/*
+Author: PLAU & Mamangva
+Description: Landing page para Lets
+Version: 1.0.0
+
+*/
+
+/*--------------------------------------------------------------
+# Bootstrap CORE
+--------------------------------------------------------------*/
+@import "bootstrap.less";
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Reset
+# Tipografia
+# Cores
+# Elements
+# Forms
+# Navigation
+        ## Links
+        ## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+        ## Posts and pages
+        ## Asides
+        ## Comments
+# Infinite scroll
+# Media
+        ## Captions
+        ## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Reset
+--------------------------------------------------------------*/
+p, a, h1, h2, h3, h4, h5{
+    padding: 0;
+    margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Tipografia
+--------------------------------------------------------------*/
+@font-face{
+    font-family: Bernina Sans Regular;
+    src: url('../css/font/BerninaSans-Web-Regular.woff');
+}
+@font-face{
+    font-family: Bernina Sans Bold;
+    src: url('../css/font/BerninaSans-Web-Bold.woff');
+}
+@font-face{
+    font-family: Bernina Sans Condense Bold;
+    src: url('../css/font/BerninaSans-Web-CondensedBold.woff');
+}
+@font-face{
+    font-family: Lest Regular;
+    src: url('../css/font/Lets-Regular.woff');
+}
+
+@berdina-bold: Bernina Sans Bold;
+@berdina: Bernina Sans Regular;
+@berdina-condense: Bernina Sans Condense Bold;
+@lets: Lest Regular;
+
+
+
+/*--------------------------------------------------------------
+# Cores
+--------------------------------------------------------------*/
+@branco: #ffffff;
+@gelo: #feffff;
+@cinza-01: #b2b2b2;
+@cinza-02: #f0f0f0;
+@cinza-03: #808285;
+@cinza-07: #AFAFAF;
+@cinza-08: #dcdcdc;
+@azul-escuro: #1d6cad;
+@azul: #1c8fd9;
+@verde: #00b07c;
+@filtro-image-color: black;
+
+/*--------------------------------------------------------------
+# Tipografia
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Elementos e funcoes
+--------------------------------------------------------------*/
+
+header{
+    font-family: @lets;
+
+    .logo {
+        color: #1D6CAD;
+        float: left;
+        font-size: 2.6rem;
+        line-height: 1;
+        margin-top: 0.8rem;
+        padding-top: 0rem;
+        text-transform: uppercase;
+    }
+
+}
+
+.img-conver-type{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.font-btn{
+    font-family: @berdina-condense;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: condensed;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #ffffff;
+    .text-uppercase;
+
+    z-index: 52;
+    position: relative;
+
+}
+
+.h2-padrao{
+    margin-bottom: 30px;
+    font-family: @berdina;
+    font-size: 38px;
+    line-height: 1.3;
+    color: @azul-escuro;
+}
+
+.texto-padrao{
+    font-family: @berdina;
+    font-size: 16px;
+    line-height: 1.8;
+    color: @cinza-03;
+}
+
+#img-filter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 51;
+}
+
+/*--------------------------------------------------------------
+# Botoes
+--------------------------------------------------------------*/
+.btn-verde{
+    .btn;
+    .button-variant(@branco; @verde; @verde);
+    min-width: 166px;
+    border-radius: 3px;
+    background-image: linear-gradient(to top, #458e50, #52b152), linear-gradient(#ffffff, #ffffff);
+    border: solid 1px #458e50;
+
+    .font-btn;
+}
+
+
+.btn-azul{
+    .btn;
+    .button-variant(@branco; @azul; @azul);
+    min-width: 224px;
+
+    border-radius: 3px;
+    background-image: linear-gradient(to top, #1d6cad, #1c8fd9), linear-gradient(#ffffff, #ffffff);
+    border: solid 1px #1d6cad;
+
+    .font-btn;
+}
+
+.btn-branco{
+    .btn;
+    .button-variant(@azul-escuro; @branco; @branco);
+    min-width: 280px;
+    .font-btn;
+    color: @azul-escuro;
+
+    border-radius: 3px;
+    background-image: linear-gradient(to top, #dcdcdc, #ffffff), linear-gradient(#ffffff, #ffffff);
+    background-image: linear-gradient(to top, #dcdcdc, #ffffff), linear-gradient(#ffffff, #ffffff);
+    border: solid 1px #dcdcdc;
+    border: solid 1px #dcdcdc;
+
+}
+
+
+/*--------------------------------------------------------------
+# menu
+--------------------------------------------------------------*/
+.navbar-default {
+    border: 0;
+    border-radius: 0;
+    border-top: 5px solid @azul-escuro !important;    
+    background-color: @branco;
+    margin: 0;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    height: 70px;
+
+}
+
+/*--------------------------------------------------------------
+# vitrine-index
+--------------------------------------------------------------*/
+.vitrine-index{
+    .img-conver-type;
+    min-height: 560px;  
+    .text-center;
+    position: relative;
+    z-index: 50;
+
+
+    .vitrine-index-titulo{
+        margin-top: 212px - 120px;
+        z-index: 52;
+        position: relative;
+    }
+
+    .vitrine-index-texto{
+        margin-top: 18px;
+        z-index: 52;
+        position: relative;
+    }
+
+    .vitrine-index-btn{
+        margin-top: 81px;
+        margin-bottom: 81px;
+        z-index: 52;
+        position: relative;
+    }
+
+    #main-text{
+        /*width: 667px;*/
+        min-height: 109px;
+        font-family: @berdina-bold;
+        font-size: 50px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.16;
+        text-align: center;
+        color: @branco;
+    }
+
+    #sub-text{
+        /*width: 470px;*/
+        min-height: 43px;
+        font-family: @berdina;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.63;
+        text-align: center;
+        color: @branco;
+    }
+}
+
+/*--------------------------------------------------------------
+# company-features
+--------------------------------------------------------------*/
+.company-features{
+    min-height: 742px;
+    padding-bottom: 98px;
+    background-color: @branco;
+    border: 1px solid @cinza-07;
+    border-top: 0px;
+
+    .text-center;
+
+    img{
+        .center-block;
+        .img-responsive;
+        margin-top: 83px;
+        display: block;
+        height: 104px;
+        width: auto;
+    }
+
+    span.feature-text{
+        height: 54px;
+        font-family: @berdina;
+        font-size: 23px;
+        font-weight: bold;
+        line-height: 1.3;
+        color: @azul-escuro;
+        display: block;
+        margin-top: 34px;
+        margin-bottom: 36px;
+
+        /* Medium devices (desktops, 992px and up) */
+        @media (min-width: @screen-sm-min) { 
+            margin-left: 22px;
+            margin-right: 22px;
+        }
+
+
+
+    }
+
+    span.saibamais{
+        .text-uppercase;
+        height: 13px;
+        font-family: @berdina-condense;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: condensed;
+        line-height: 1.6;
+        letter-spacing: 1.3px;
+        a{
+            color: @azul;            
+        }
+    }
+
+}//company-features
+
+/*--------------------------------------------------------------
+# feature-lista
+--------------------------------------------------------------*/
+.feature-lista{
+    height: 630px;
+    background-color: @branco;
+    border: 1px solid @cinza-07;
+    border-top: 0px;
+    position: relative;
+
+    .text{
+        margin-top: 168px;
+        @media (max-width: @screen-xs-max) { 
+            margin-top: 80px;
+        }
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+            margin-top: 80px;
+        }
+    }
+
+    .img{
+
+        position: relative;
+        height: 100%;
+
+
+        @media (max-width: @screen-xs-max) { 
+            height: initial;
+        }
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+            height: 60%;
+        }
+
+        img{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            .img-responsive;
+            .center-block;
+
+            @media (max-width: @screen-xs-max) { 
+                position: relative;
+
+                bottom: initial;
+                left: initial;
+                right: initial;
+
+                margin-top: 35px;
+            }
+
+        }
+    }
+
+    @media (max-width: @screen-sm-max) { 
+
+        height: auto;
+    }
+
+
+
+    .feature-lista-title{
+        .h2-padrao;
+    }
+
+    .feature-lista-text{
+        .texto-padrao;        
+    }
+
+}//feature-lista
+
+/*--------------------------------------------------------------
+# feature-analise
+--------------------------------------------------------------*/
+.feature-analise{
+
+    background-color: @branco;
+    border: 1px solid @cinza-07;
+    border-top: 0px;
+
+
+    @media (max-width: @screen-xs-max) { 
+        height: auto;
+    }
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+        height: 600px;
+    }
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+        height: 600px;
+    }
+    @media (min-width: @screen-lg-min) { 
+        height: 600px;
+    }
+
+
+    .img{
+        height: 100%;
+
+        padding-left: 0;
+
+        @media (max-width: @screen-xs-max) { 
+            height: 50%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .cover-image{
+            .img-conver-type;
+            height: 100%;
+
+        }
+
+
+    }
+
+    .text{
+        margin-top: 110px;
+        margin-bottom: 123px;
+
+        @media (max-width: @screen-xs-max) { 
+            margin-top: 35px;
+        }
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+            margin-top: 50px;
+        }
+
+        .feature-analise-title{
+            .h2-padrao;
+
+        }
+
+        .feature-analise-text{
+            .texto-padrao;
+
+        }
+
+
+    }
+
+
+
+
+}//feature-analise
+
+/*--------------------------------------------------------------
+# feature-gerencia
+--------------------------------------------------------------*/
+.feature-gerencia{
+
+    min-height: 630px;
+    background-color: @branco;
+    border: 1px solid @cinza-07;
+    border-top: 0px;
+    position: relative;
+
+    .text{
+        margin-top: 174px;
+        @media (max-width: @screen-xs-max) { 
+            margin-top: 80px;
+        }
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+            margin-top: 80px;
+        }
+
+
+        .feature-lista-title{
+            .h2-padrao;
+        }
+
+        .feature-lista-text{
+            .texto-padrao;
+        }
+
+    }
+
+    .img{
+        margin-top: 32px;
+        img{
+            .img-responsive;
+            .center-block;
+        }
+    }
+
+    @media (max-width: @screen-sm-max) { 
+
+        height: auto;
+    }
+
+
+
+
+
+
+
+}//feature-gerencia
+
+
+/*--------------------------------------------------------------
+# promoters
+--------------------------------------------------------------*/
+.promoters {
+    .img-conver-type;
+    min-height: 463px;
+    position: relative;
+
+    padding-bottom: 60px;
+
+    .text-center;
+
+    .promoters-content-titulo{
+        z-index: 52;
+        margin-top: 155px;
+
+        .main-text{
+
+            h2{
+                font-family: @berdina-bold;
+                font-size: 50px;
+                font-weight: bold;
+                line-height: 1.2;
+                color: @branco;
+
+            }
+
+        }
+
+    }
+
+    .promoters-content-texto{
+        z-index: 52;
+        margin-top: 23px;
+        margin-bottom: 31px;
+
+        .sub-text{
+            p{
+                .texto-padrao;
+                color: @branco;
+            }
+        }
+
+    }
+
+
+
+
+}//promoters
+
+
+/*--------------------------------------------------------------
+# feature-audiencia
+--------------------------------------------------------------*/
+.feature-audiencia{
+    //min-height: 600px;
+    background-color: @branco;
+    border: 1px solid @cinza-07;
+    border-top: 0px;
+
+    padding-bottom: 184px;
+
+    img{
+        margin-top: 144px;
+        .img-responsive;
+        .center-block;
+    }
+
+    .text{        
+
+        margin-top: 175px;
+
+        .feature-audiencia-title{
+            .h2-padrao;
+
+        }
+
+        .feature-audiencia-text{
+            .texto-padrao;
+        }
+
+    }
+
+
+
+}//feature-audiencia
+
+
+/*--------------------------------------------------------------
+# feature-check
+--------------------------------------------------------------*/
+.feature-check{
+    background-color: @branco;
+    border: 1px solid @cinza-07;
+    border-top: 0px;
+
+    padding-bottom: 67px;
+
+    .text{
+        margin-top: 202px;
+
+        .feature-check-title{
+            .h2-padrao;
+        }
+
+        .feature-check-text{
+            .texto-padrao;
+        }
+
+
+    }
+
+    img{
+
+        margin-top: 53px;
+
+        .img-responsive;
+        .center-block;
+    }
+
+
+
+
+
+}//feature-check
+
+
+/*--------------------------------------------------------------
+# feature-relatorios
+--------------------------------------------------------------*/
+.feature-relatorios{
+    //min-height: 1000px;
+    background-color: @branco;
+    border: 1px solid @cinza-07;
+    border-top: 0px;
+    .text-center;
+
+    img{
+        margin-top: 92px;
+        .img-responsive;
+        .center-block;
+    }
+
+    .feature-relatorios-title{
+        margin-top: 68px;
+        .h2-padrao;
+    }
+
+    .feature-relatorios-text{
+        .texto-padrao;
+        margin-bottom: 113px;
+    }
+
+
+}//feature-relatorios
+
+
+/*--------------------------------------------------------------
+# pre-footer
+--------------------------------------------------------------*/
+.pre-footer{
+    background-color: @azul-escuro;
+
+    padding-bottom: 120px;
+
+    .text-center;
+
+    .pre-footer-title{
+        margin-top: 110px;
+        margin-bottom: 46px;
+
+        .h2-padrao;
+        color: @gelo;
+
+    }
+
+
+
+}//pre-footer
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer{
+    height: 200px;
+    background-color: @cinza-02;
+}
+
+
+
+
+
+
+
+
+
+
